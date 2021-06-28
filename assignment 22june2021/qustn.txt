@@ -1,0 +1,2 @@
+1.Execute the C program and note down the outputs!
+2.Write a C program implementing  mem copy operation with void pointers.
