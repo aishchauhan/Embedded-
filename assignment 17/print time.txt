@@ -1,3 +1,0 @@
-2) How to print the current time, seconds, milliseconds, nanoseconds in linux ?
-
-$ date +%H.%M.%S.%3N.%N
