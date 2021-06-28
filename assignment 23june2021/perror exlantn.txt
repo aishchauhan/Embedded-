@@ -1,0 +1,14 @@
+perror
+1. Defined in header <stdio.h>
+2. function declaration: void perror( const char *s );
+3. Prints a descriptive error message to standard error. First the string str is printed, followed by a colon then a space
+4. Prints a textual description of the error code currently stored in the system variable errno to stderr.
+
+The description is formed by concatenating the following components:
+
+The contents of the null-terminated byte string pointed to by s,
+followed by ": " (unless s is a null pointer or the character pointed to by s is the null character)
+implementation-defined error message string describing the error code stored in errno, 
+followed by '\n'. The error message string is identical to the result of strerror(errno).
+
+5. Return value: none
