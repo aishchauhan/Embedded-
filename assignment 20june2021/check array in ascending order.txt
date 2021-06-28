@@ -1,0 +1,55 @@
+/*
+2.check if array is sorted in ascending order or not?
+*/
+#include<stdio.h>
+#define ARRAY_SIZE 5
+
+int main()
+{
+   int numList[ARRAY_SIZE];
+   int i=0,isAscending=1;
+   printf("Enter the %d array element\n",ARRAY_SIZE);
+   for(i=0 ; i < ARRAY_SIZE ; i++)
+   {
+       scanf("%d",&numList[i]);
+   }
+
+   for(i=0 ; i < ARRAY_SIZE-1 ; i++)
+   {
+       if( numList[i] > numList[i+1] ){
+            isAscending = 0;
+			break;
+       }
+   }
+   if(isAscending == 1)
+   {
+		printf("The given number list is in ascending order\n");
+   }
+   else
+   {
+		printf("The given number list is in not in ascending order\n");
+   }
+}
+/*
+Output:
+---------------------------------------------------
+Test case 1:
+Enter the 5 array element
+1
+2
+3
+4
+3
+The given number list is in not in ascending order
+---------------------------------------------------
+---------------------------------------------------
+Test case 2:
+Enter the 5 array element
+1
+2
+3
+4
+5
+The given number list is in ascending order
+---------------------------------------------------
+*/
