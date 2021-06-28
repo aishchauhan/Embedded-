@@ -1,0 +1,3 @@
+Assignment Questions 23-06-2021:
+1. Install valgrind. execute few sample programs and evaluate the memory leaks.
+2. What is perror? how it is working? explore few examples.
