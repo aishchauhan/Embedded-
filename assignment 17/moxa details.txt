@@ -1,0 +1,5 @@
+1.	Find out the details about moxa board ?
+
+It is used for serial communication
+It supports windows, Linux, Unix
+Industrial networking application
