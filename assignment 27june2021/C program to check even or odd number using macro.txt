@@ -1,0 +1,27 @@
+/**
+ * C program to check even or odd number using macro
+ */
+
+#include <stdio.h>
+
+// Define macro to check odd number
+#define IS_ODD(x) (x & 1)
+
+int main()
+{
+    int num;
+
+    // Input a number from user
+    printf("Enter any number to check even or odd: ");
+    scanf("%d", &num);
+
+    if (IS_ODD(num))
+        printf("%d is ODD\n", num);
+    else
+        printf("%d is EVEN\n", num);
+
+    return 0;
+}
+Output
+Enter any number to check even or odd: 22
+22 is EVEN

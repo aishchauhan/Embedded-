@@ -1,0 +1,45 @@
+/*Given a PIN (value in HEX) and bit number, we have to SET and then CLEAR given bit of the PIN (val) by using Macros.
+
+Macros definitions:
+
+    #define SET(PIN,N) (PIN |=  (1<<N))
+    #define CLR(PIN,N) (PIN &= ~(1<<N))
+Here,
+
+SET and CLR are the Macro names
+PIN is the value whose bit to set or/and clear
+N is the bit number to set or/and clear*/
+
+#include <stdio.h>
+
+#define SET(PIN,N) (PIN |=  (1<<N))
+#define CLR(PIN,N) (PIN &= ~(1<<N))
+
+int main(){
+	
+	unsigned char val = 0x11;
+	unsigned char bit = 2;
+	
+	printf("val = %X\n",val);
+	
+	//set  bit 2 of val
+	SET(val,bit);
+	printf("Aftre setting  bit %d, val = %X\n", bit, val);
+
+	//clear bit 2 of val
+	CLR(val,bit);
+	printf("Aftre clearing bit %d, val = %X\n", bit, val);	
+	
+	return 0;	
+}
+Output
+val = 11
+    Aftre setting  bit 2, val = 15
+    Aftre clearing bit 2, val = 11
+	
+/*Explanation:
+
+Initially val is 0x11, its binary value is "0001 0001".
+In the example, we are setting and clear bit 2 (please note start counting bits from 0 i.e. first bit is 0, second bit is 1 and third bit is 2).
+After calling Macro SET(val,bit), the bit number 2 (i.e. third bit) will be set/hight and the value of val will be "0001 0101" that will be 0x15 in Hexadecimal.
+And then, we are calling CLR(val,bit), after calling this Macro, the bit number 2 (i.e. third bit) will be cleared and the value of val will be "0001 0001" again, that is 0x11 in Hexadecimal. */
