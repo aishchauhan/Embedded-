@@ -1,0 +1,24 @@
+#include 
+#include 
+
+/*
+*To convert 53 to the character 'S':
+*char returnVal = hexToString('5', '3');
+*/
+char hexToAscii(char first, char second)
+{
+char hex[5], *stop;
+hex[0] = '0';
+hex[1] = 'x';
+hex[2] = first;
+hex[3] = second;
+hex[4] = 0;
+return strtol(hex, &stop, 16);
+}
+int main(int argc, char* argv[])
+{
+printf("%c\n", hexToAscii('5', '3'));
+}
+
+...output..
+s
